@@ -1,12 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+//import FormSample from "./components/FormSample";
+//import App from "./App";
+//import Hoc2 from "./components/Hoc2";
+//import ContextSample from "./components/ContextSample2";
+//import Composition from "./components/Composition";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import store from "./store";
+import ReduxTest from "./components/ReduxTest";
+import { Provider } from "react-redux";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+function render() {
+    ReactDOM.render(
+        <Provider store={store}>
+            <ReduxTest />
+        </Provider>,
+        document.getElementById("root")
+    );
+}
+render(); // 初始化渲染一次
+// store提供一个订阅API,当状态发生变化就执行渲染函数，重新渲染
+//store.subscribe(render);
+
+//ReactDOM.render(<Composition />, document.getElementById("root"));
