@@ -6,15 +6,16 @@ import "./index.css";
 //import Hoc2 from "./components/Hoc2";
 //import ContextSample from "./components/ContextSample2";
 //import Composition from "./components/Composition";
+// import ReduxTest from "./components/ReduxTest";
 
 import store from "./store";
-import ReduxTest from "./components/ReduxTest";
+import ReduxComposition from "./components/ReduxComposition";
 import { Provider } from "react-redux";
 
 function render() {
     ReactDOM.render(
         <Provider store={store}>
-            <ReduxTest />
+            <ReduxComposition />
         </Provider>,
         document.getElementById("root")
     );
