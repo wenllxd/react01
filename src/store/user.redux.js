@@ -15,18 +15,11 @@ export default (state = initialState, { type, payload }) => {
 };
 
 // 导出一个异步登录方法，return一个函数
-export function login() {
-    return dispatch => {
-        setTimeout(() => {
-            dispatch({ type: "login" });
-        }, 1000);
-    };
-}
-
-export function logout() {
-    return dispatch => {
-        setTimeout(() => {
-            dispatch({ type: "logout" });
-        });
-    };
-}
+// for redux-thunk的写法
+// export function login() {
+//     return dispatch => {
+//         setTimeout(() => {
+//             dispatch({ type: "login" });
+//         }, 1000);
+//     };
+// }

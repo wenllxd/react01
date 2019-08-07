@@ -111,6 +111,7 @@ class PrivateRoute extends Component {
     // state - 把当前页面地址作为回调地址传过去
     render() {
         console.log("provide-isLogin:", this.props);
+        // 这里是提取变量component赋值并给新的变量名Component,因为组件名要大写
         const { isLogin, component: Component, ...rest } = this.props;
         return (
             <Route
